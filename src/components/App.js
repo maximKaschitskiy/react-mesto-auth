@@ -222,11 +222,11 @@ function handleLoginSubmit(event) {
   .catch((err) => {
     console.log(err);
     setIsEntranceFail(true);
-    setIsInfoTooltip(true);
   })
   .finally(
     ()=> {
       setOnload(false);
+      setIsInfoTooltip(true);
   });
 }
 
@@ -275,16 +275,15 @@ function handleRegisterSubmit(event) {
   .then(
     () => {
       setIsEntranceFail(false);
-      setIsInfoTooltip(true);
   })
   .catch((err) => {
     console.log(err);
     setIsEntranceFail(true);
-    setIsInfoTooltip(true);
   })
   .finally(
     ()=> {
       setOnload(false);
+      setIsInfoTooltip(true);
   });
 }
 

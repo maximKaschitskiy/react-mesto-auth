@@ -17,7 +17,6 @@ const handleChange = (event) =>{
 const handleSubmit = (event) => {
     event.preventDefault();
     onSubmit(inputField);
-    event.target.reset();
 }
 
 React.useEffect(() => {

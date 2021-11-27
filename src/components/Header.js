@@ -4,7 +4,7 @@ import headerLogo from '../images/header/header__logo.svg';
 
 function Header({ loggedIn, currentUserLogin, logOut }) {
   
-  let location = useLocation();
+  const location = useLocation();
 
   const entranceButtonsText = { registration: "Зарегистрироваться",
                                 login: "Войти",

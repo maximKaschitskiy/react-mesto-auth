@@ -18,7 +18,6 @@ function PopupAddPlace( {isOpen, onClose, formTitle, buttonTitle, onAddPlace, on
   const handleSubmit = (event) => {
     event.preventDefault();
     onAddPlace(inputField);
-    event.target.reset();
 }
 
 React.useEffect(() => {
@@ -29,7 +28,6 @@ React.useEffect(() => {
 }, [isOpen]);
 
   return (
-    <>
       <PopupWithForm
         className={"popup__form popup__form_state_add-place"}
         isOpen={isOpen}
@@ -45,7 +43,6 @@ React.useEffect(() => {
       <input value={inputField.link} type="url" placeholder="Ссылка на картинку" className="popup__form-input popup__form-input_field_picture-link" name="link" id="picture-link-field"  onChange={(event)=>{handleChange(event)}}/>
       <span className="popup__form-error-text popup__form-error-text_message_picture-link picture-link-field-error"></span>
       </PopupWithForm>
-    </>
   );
 }
 
