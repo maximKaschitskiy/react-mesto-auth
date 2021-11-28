@@ -222,11 +222,11 @@ function handleLoginSubmit(event) {
   .catch((err) => {
     console.log(err);
     setIsEntranceFail(true);
+    setIsInfoTooltip(true);
   })
   .finally(
     ()=> {
       setOnload(false);
-      setIsInfoTooltip(true);
   });
 }
 
